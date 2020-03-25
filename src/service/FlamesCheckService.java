@@ -30,14 +30,13 @@ package service;
 	char checkFlames(int size) {
 		int start=0,indexCount,flameCount=0;
 	    String tmp;
-	    String a;
 	    StringBuilder flames = new StringBuilder("flames");
 	     while(start<flames.length()) {
 	         tmp=Character.toString(flames.charAt(start));
-	    	indexCount=flames.indexOf(tmp)+1;
+	    	indexCount=flames.indexOf(tmp);
 	    	flameCount+=1;
 	    	if(flameCount==size){
-	    	     flames.deleteCharAt(indexCount-1);
+	    	     flames.deleteCharAt(indexCount);
 	    	     start--;
 	    	    if(flames.length()==1)
 	    	    break;
